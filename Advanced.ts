@@ -110,7 +110,8 @@ console.log(`Three Dimensional Array is ${threeDi}`)
 
 // What is an Object in TypeScript?
 
-// An object in TypeScript is a collection of key-value pairs where each key has a specific value type. It is used to store multiple related values in a structured way.
+// An object in TypeScript is a collection of key-value pairs where each key has a specific value type. 
+// It is used to store multiple related values in a structured way.
 
 // syntax => "type variableName (annotations/types) = { property: value }"
 
@@ -165,13 +166,13 @@ console.log(person());
 
 
 
-// What is Type Alias in TypeScript?
+// What is Type Alias in TypeScript?                                                            
+  
+  
 
 //A Type Alias in TypeScript is a way to give a custom name to a type. It helps make your code more readable and reusable.
 
-
-// OR 
-
+// =======================================================================OR=============================================================================
 
 // A Type Alias is way to create a new name for an existing type. It allows you to define a custom type that refers to another type  and give it more meaningfull or descriptive name 
 // Type Aliases are defined  using type keyword followed by the name of the alias, an equal sign(=) and the type if refers to....
@@ -371,9 +372,10 @@ console.log(ChangingValue)
 
 
 
-// What is an Intersection Type in TypeScript?
+// What is an Intersection Type in TypeScript?                    
 
-// An Intersection Type in TypeScript allows you to combine multiple types into one using the & (ampersand) operator. It merges properties from different types into a single type.
+// An Intersection Type in TypeScript allows you to combine multiple types into one using the & (ampersand) operator. 
+// It merges properties from different types into a single type.
 
 // Example of Intersection Type
 
