@@ -1,5 +1,11 @@
 // Tuples
 
+// Tuples in TypeScript
+// A tuple in TypeScript is a special type of array with a fixed length and specific types for each element.
+
+
+
+
 let Tupleperson: [string, number, string];
 
 
