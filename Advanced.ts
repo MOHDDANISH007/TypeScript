@@ -647,6 +647,31 @@ console.log(SetStatusCode(200));
 
 // Tuples
 
+// Tuples in TypeScript (Simple Explanation)                                                                                                                                            
+  
+  
+  
+  
+  
+  
+  
+// A tuple in TypeScript is a fixed-length array where each element has a specific type.
+
+// Example:
+                    
+  
+// let person: [string, number] = ["Danish", 25];
+
+// The first element must be a string ("Danish")
+
+// The second element must be a number (25).
+    
+// Key Features:
+// Fixed Length – You cannot add more elements than defined.
+// Ordered Types – Each position has a predefined type.
+// Allows Multiple Data Types – Unlike regular arrays, tuples enforce strict type positions.
+
+
 let Tupleperson : [string, number, string];
 
 
