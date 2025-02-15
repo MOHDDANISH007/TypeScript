@@ -4,6 +4,27 @@
 // A tuple in TypeScript is a special type of array with a fixed length and specific types for each element.
 
 
+Tuple Methods in TypeScript
+Since tuples are arrays under the hood, they support the following built-in methods:
+
+// ✅ Safe Methods (Preserve Tuple Behavior)
+// length - Returns the number of elements.
+// concat() - Combines tuples without changing them.
+// slice() - Extracts a portion of a tuple.
+// join() - Joins elements into a string.
+// toString() - Converts a tuple to a string.
+// indexOf() - Finds the index of an element.
+// ⚠️ Unsafe Methods (May Alter Tuple Structure)
+// push() - Adds elements (can break the fixed-length rule).
+// pop() - Removes the last element (can change tuple length).
+// shift() - Removes the first element.
+// unshift() - Adds elements at the beginning.
+// splice() - Adds or removes elements.
+// reverse() - Reverses the tuple (can cause type issues).
+// sort() - Sorts elements (can cause type issues).                                        
+  
+  
+
 
 
 let Tupleperson: [string, number, string];
