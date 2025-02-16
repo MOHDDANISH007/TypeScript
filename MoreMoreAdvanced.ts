@@ -1161,4 +1161,114 @@ interface MovieDetails {
   console.log(NumberBox.getter());
   
   console.log(document);
+
+
+// update code on 17/2/25
+
+console.log("This is a Generic Function")
+
+
+
+function genericFunction<T>(items: T, defaultValue: T): [T, T] {
+    return [items, defaultValue];
+
+}
+
+console.log(genericFunction(21, 9));
+console.log(genericFunction("Mohammad Danish", "Mohammad Asad"));
+
+
+function genericFunctionAddition<T>(x: T, y: T) {
+    return [x, y];
+}
+let re = genericFunctionAddition<number>(10, 20)
+console.log(re);
+
+const res = genericFunctionAddition<string>("mohammad", "danish");
+console.log(res);
+
+
+
+interface Animal {
+    name: string;
+    breed: string;
+}
+
+// Correct usage with two Dog objects
+const result = genericFunctionAddition<Animal>(
+    { name: "cat", breed: "persian" },
+    { name: "Charlie", breed: "Labrador" }
+);
+
+console.log(result);
+
+
+function getRandomKeyValue<T>(arg: { [key: string]: T }): { key: string, value: T } {
+    const keys = Object.keys(arg);
+    console.log(`Keys is => ${keys}` );
+
+    const randomKeys = keys[Math.floor(Math.random() * keys.length)]
+    return {key:randomKeys , value:arg[randomKeys]}
+}
+
+const obj = {1 : "apple", "b":"banana", "c" : "cherry", "p":"pineapple"};
+console.log(getRandomKeyValue(obj));
+
+
+
+
+// function filterArray<T extends number>(array:T[]):T[]{
+//     return array.filter((num:T)=>{return(num%2==0)})
+// }
+
+// const array = [1,2,3,4,5,6,7,8,9,10];
+// const EveneArray = filterArray<string>(array);
+// console.log(`Even Array is ${EveneArray}`);
+
+
+
+function filterArray<T>(array: T[], condition: (item: T) => boolean): T[] {
+    return array.filter((item) => condition(item));
+}
+
+const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// Define the condition function
+const isEven = (item: number) => item % 2 === 0;
+
+// Call filterArray with the correct types and condition
+const evenArray = filterArray<number>(array, isEven);
+
+console.log(`Even Array is ${evenArray}`);
+
+
+function multiplyBy2<T>(array: T[], callBackFunc: (item: T) => number): number[] {
+    return array.map((item) => callBackFunc(item));
+}
+
+
+// Define the transformation function
+const multiplyBy2Func = (item: number) => item * 2;
+
+// Call multiplyBy2 with the correct types and transformation function
+const twoTimesArray = multiplyBy2<number>(array, multiplyBy2Func);
+
+console.log(`Multiply The Array By 2 [${twoTimesArray}]`);
+
+
+
+function filterFruit<T>(array:T[],callBackFilter:(item:T)=>boolean):T[]{
+    return array.filter((item:T)=>callBackFilter(item));
+
+}
+
+
+
+const anotherFruitArray = ["Apple", "Banana", "Cherry", "Mango", "PineApple", "Gawwa"];
+
+const callBackFilter = (item:string)=>item.length < 6;
+
+const FruitResult = filterFruit<string>(anotherFruitArray, callBackFilter);
+console.log(`Fruit Less then 6 is ${FruitResult}`);
+
   
